@@ -14,11 +14,20 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word(),
-            'description' => $this->faker->sentence(),
-            'price' => $this->faker->numberBetween(10, 200),
-            'quantity_left' => $this->faker->numberBetween(10, 30),
-            'category_id' => rand(1, 8),
+            'no_penembusan' => $this->faker->sentence(),
+            'nama_produsen' => $this->faker->sentence(),
+            'distributor' => $this->faker->sentence(),
+            'kode_distributor' => $this->faker->sentence(),
+            'kode_so' => $this->faker->sentence(),
+            'tgl_order' => $this->faker->sentence(),
+            'total_kuantitas' => $this->faker->sentence(),
+            'nomor_do' => $this->faker->sentence(),
+            'nama_produk' => $this->faker->sentence(),
+            'qty' => $this->faker->sentence(),
+            'tanggal_do' => $this->faker->sentence(),
+            'dibuat_oleh' => $this->faker->sentence(),
+            'dibuat_pada' => $this->faker->sentence(),
+
         ];
     }
 }
