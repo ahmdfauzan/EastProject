@@ -1,8 +1,9 @@
-## Como usar
+## Penggunaan
 
-- Clone the repository with **git clone**
-- Copy the .env.example to .env and put your database credentials
-- Run **composer install**
-- Run **php artisan key:generate**
-- Run **php artisan migrate:fresh --seed**
+- Melakukan cloning **git clone**
+- Duplikat .env.example menjadi .env dan mengisikan kredensial database
+- Jalankan **composer install**
+- Jalankan **php artisan key:generate**
+- Jalankan **php artisan migrate:fresh --seed**
 
+# coba-monitoring-do
