@@ -5,5 +5,3 @@
 - Jalankan **composer install**
 - Jalankan **php artisan key:generate**
 - Jalankan **php artisan migrate:fresh --seed**
-
-# coba-monitoring-do
