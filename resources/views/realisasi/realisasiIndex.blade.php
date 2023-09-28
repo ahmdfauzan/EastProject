@@ -6,11 +6,17 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        {{-- <a href="{{ route('products.store') }}" class="btn btn-danger float-right">Import Excel</a> --}}
-                        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+                        {{-- <a href="{{ route('realisasi.store') }}" class="btn btn-danger float-right">Import Excel</a> --}}
+                        <form action="{{ route('realisasi.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
 
                             <button class="btn btn-primary float-right" type="submit">Import</button>
+                        </form>
+                        <form action="{{ route('realisasi.create') }}" method="GET" enctype="multipart/form-data">
+                            @csrf
+
+                            <button class="btn btn-success float-right" type="submit"
+                                style="margin-right: 20px">Export</button>
                         </form>
                     </div>
 
@@ -20,7 +26,7 @@
                                 {{ session('success') }}
                             </div>
                         @endif
-                        <table class="table table-bordered table-striped products_table" style="width: 100%;">
+                        <table class="table table-bordered table-striped realisasi_table" style="width: 100%;">
                             <thead>
                                 <tr>
                                     <th scope="col">No Penembusan</th>
@@ -49,10 +55,10 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
-            $('.products_table').DataTable({
+            $('.realisasi_table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('products.index') }}",
+                ajax: "{{ route('realisasi.index') }}",
                 responsive: true,
                 columns: [{
                         data: 'no_penembusan',

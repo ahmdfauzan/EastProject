@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RealisasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +22,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::post('loginCheck', 'App\Http\Controllers\Auth\LoginController@loginWithToken');
 
-Route::resource('products', ProductController::class)->only(['index', 'create', 'store']);
+Route::post('/loginCheck', 'App\Http\Controllers\Auth\LoginController@loginWithToken')->name('loginWithToken');
+
+Route::resource('realisasi', RealisasiController::class)->only(['index', 'create', 'store']);

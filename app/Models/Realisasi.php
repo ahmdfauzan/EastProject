@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Realisasi extends Model
 {
-    use HasFactory;
-
+    // use HasFactory;
+    protected $table = "realisasi";
+    protected $primaryKey = "id";
     protected $fillable = [
         'no_penembusan',
         'nama_produsen',

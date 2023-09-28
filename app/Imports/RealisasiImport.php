@@ -3,14 +3,14 @@
 namespace App\Imports;
 
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\Realisasi;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithBatchInserts;
 use Maatwebsite\Excel\Concerns\WithChunkReading;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithValidation;
 
-class ProductsImport implements ToModel, WithHeadingRow
+class RealisasiImport implements ToModel, WithHeadingRow
 {
     private $categories;
 
@@ -25,7 +25,7 @@ class ProductsImport implements ToModel, WithHeadingRow
      */
     public function model(array $row)
     {
-        return new Product([
+        return new Realisasi([
             'no_penembusan' => $row['no_penembusan'],
             'nama_produsen' => $row['nama_produsen'],
             'distributor' => $row['distributor'],
